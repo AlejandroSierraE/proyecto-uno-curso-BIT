@@ -1,0 +1,129 @@
+/*Tipografia*/
+*{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+#introCarousel .carousel-item:nth-child(1) {
+  background-image: url('../resources/img/lamborghini/revuelto.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#introCarousel .carousel-item:nth-child(2) {
+  background-image: url('../resources/img/ferrari/purosangue.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#introCarousel .carousel-item:nth-child(3) {
+  background-image: url('../resources/img/mercedez/GLS_600.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#introCarousel .carousel-item:nth-child(4) {
+  background-image: url('../resources/img/porsche/porsche-normal.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#introCarousel .carousel-amg {
+    background: linear-gradient( 45deg, rgb(9 13 18 / 98%), rgb(14 127 214 / 43%) 100% );
+}
+
+/*Styles section welcome*/
+#section-welcome {
+  padding-top: 7%;
+}
+.welcome-section {
+  color: #777;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  
+}
+.welcome-title {
+  text-transform: uppercase;
+}
+.welcome-paragraph {
+  text-align: center;
+}
+
+/*Styles section parallax*/
+#parallaxMarcas {
+  background-image: url("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/banner/533702.jpg");
+  background-color: black; 
+  background-attachment: fixed;
+  background-position-y: -0.2;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.sectionParallaxMarcas {
+  text-align: center;
+  color: white;
+  transition: 0s linear;
+  transition-property: background-position;
+}
+#nuestrasMarcas{
+  background: linear-gradient( 45deg, rgb(218 239 169), rgb(14 127 214 / 43%) 100% );
+  height: 100%;
+}
+.nuestrasMarcas-title {
+  text-transform: uppercase;
+}
+.border-marcas {
+  border-radius: 1vh;
+}
+
+/*Styles our services*/
+.nuestrosServicios-section {
+  color: #777;
+  background-color:white;
+  text-align:center;
+}
+.nuestrosServicios-title {
+  text-transform: uppercase;
+}
+#testimonios-section {
+  background-color: rgb(250 250 250)
+}
+
+/*Media queries*/
+@media (min-width: 992px) {
+  /* Carousel styling */
+  #introCarousel {
+    margin-top: -58.59px;
+  }
+  #introCarousel,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item.active {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 992px) {
+  /* nav styling*/
+  .bg-dark-response {
+    --mdb--bg-opacity: 1;
+    background-color: rgba(51,45,45,var(--mdb--bg-opacity));
+  }
+  .bg-dark-response {
+    --mdb-bg-opacity: 1;
+    background-color: rgba(var(--mdb-dark-rgb),var(--mdb-bg-opacity))!important;
+  }
+}
+
+
+
