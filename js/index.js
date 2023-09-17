@@ -71,36 +71,36 @@ function generateIntroCarouselHTML() {
 // Generar el HTML del IntroCarrusel
 generateIntroCarouselHTML();
 
-
+//////////////////////////////////////////////////////////////////////////////////////
 //Arreglo de objetos con la información de las marcas TOP
 const topBrands = [
     {
         name: "Ferrari",
         img: "./resources/img/marcasTop/ferrari-logo2.jpg",
-        url: "#!",
+        url: "https://www.ferrari.com/es-CO",
         backgroundColor:"rgba(57, 192, 237, 0.2)"
     },
     {
         name: "Lamborghini",
         img: "./resources/img/marcasTop/Lamborghini-logo2.jpg",
-        url: "#!",
+        url: "https://www.lamborghini.com/en-en",
         backgroundColor:"rgba(57, 192, 237, 0.2)"
     },
     {
         name: "Porsche",
         img: "./resources/img/marcasTop/porsche-logo.jpg",
-        url: "#!",
+        url: "https://www.porsche.com/germany/?referrer_url=https%3A%2F%2Fwww.porsche.com%2Flatin-america-es%2F_colombia_%2F",
         backgroundColor:"rgba(57, 192, 237, 0.2)"
     }
 ]
 
 //Función para generar el HTML de cada marca
-function generarMarcaHTML(brand) {
+function generateBrandHTML(brand) {
     return `
         <div class="col-md-4">
             <div class="bg-image hover-overlay ripple border-marcas m-2">
                 <img src="${brand.img}" class="img-fluid" alt="${brand.name}" />
-                <a href="${brand.url}">
+                <a href="${brand.url}" target= "_blank">
                     <div class="mask" style="background-color: ${brand.backgroundColor} ;"></div>
                 </a>
             </div>
@@ -109,13 +109,66 @@ function generarMarcaHTML(brand) {
 }
 
 // Obtener el contenedor de marcas
-const marcasContainer = document.getElementById("idMarcasTopContainer");
+const marcasContainer = document.getElementById('idMarcasTopContainer');
 
 // Generar y agregar las marcas al contenedor
 topBrands.forEach((brand) => {
-    const marcaHTML = generarMarcaHTML(brand);
-    marcasContainer.innerHTML += marcaHTML;
+    const brandHTML = generateBrandHTML(brand);
+    marcasContainer.innerHTML += brandHTML;
 });
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+const ourServices = [
+    {
+        title: "Asesoria personalizada",
+        description: "Nuestra asesoría personalizada se adapta a ti, brindándote orientación y soluciones a medida para alcanzar tus metas y objetivos.",
+        linkText: "¡Quiero este!",
+        url: "#",
+    },
+    {
+        title: "Acercamiento con la marca",
+        description: "Descubre cómo nuestro enfoque único crea conexiones auténticas y fortalece la lealtad del cliente con la marca.",
+        linkText: "¡Quiero este!",
+        url: "#",
+    },
+    {
+        title: "Capacitación sobre el cuidado de carro",
+        description: "Potencia tu conocimiento con nosotros, garantizando un rendimiento óptimo y una vida útil prolongada para tus vehículos.",
+        linkText: "¡Quiero este!",
+        url: "#",
+    },
+    {
+        title: "Test drive con el vehiculo deseado",
+        description: "Experimenta la emoción de un Test Drive , acercándote a tu sueño automovilístico y tomando el control de tu futuro en la carretera.",
+        linkText: "¡Quiero este!",
+        url: "#",
+    },
+]
+
+function generateOurServicesHtml(service) {
+    return `
+    <div class="col-md-6 col-sm-12">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${service.title}</h5>
+                    <p class="card-text">${service.description}</p>
+                    <a href="${service.url}" class="btn btn-primary">${service.linkText}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+}
+
+const servicesContainer = document.getElementById('ourServicesContainer');
+
+ourServices.map((service) => {
+    const serviceHTML = generateOurServicesHtml(service);
+    servicesContainer.innerHTML += serviceHTML
+})
+
 
 
 
