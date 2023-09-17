@@ -119,6 +119,7 @@ topBrands.forEach((brand) => {
 
 
 //////////////////////////////////////////////////////////////////////////////////////
+//Arreglo de objetos con la información de los servicios
 const ourServices = [
     {
         title: "Asesoria personalizada",
@@ -146,6 +147,7 @@ const ourServices = [
     },
 ]
 
+//Función para generar el HTML de cada servicio
 function generateOurServicesHtml(service) {
     return `
     <div class="col-md-6 col-sm-12">
@@ -161,14 +163,31 @@ function generateOurServicesHtml(service) {
     </div>
     `;
 }
-
+// Obtener el contenedor de servicios
 const servicesContainer = document.getElementById('ourServicesContainer');
 
+// Generar y agregar los servicios al contenedor
 ourServices.map((service) => {
     const serviceHTML = generateOurServicesHtml(service);
     servicesContainer.innerHTML += serviceHTML
 })
 
+//////////////////////////////////////////////////////////////////////////////////////
+// Obtener el botón de Subir
+const btnSubir = document.getElementById("btnSubir");
 
+// Mostrar u ocultar el botón de Subir dependiendo de la posición del scroll
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btnSubir.style.display = "block";
+    } else {
+        btnSubir.style.display = "none";
+    }
+};
 
+// Desplazar suavemente hacia arriba cuando se hace clic en el botón de Subir
+btnSubir.addEventListener("click", function() {
+    document.documentElement.scrollTop = 0; // Para navegadores como Chrome, Firefox, IE y Safari
+    document.body.scrollTop = 0; // Para navegadores que utilizan propiedades document.body.scrollTop
+});
 
