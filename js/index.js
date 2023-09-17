@@ -32,7 +32,7 @@ const introCarouselItems = [
 ];
 
 // Función para generar el HTML del IntroCarrusel dinámicamente
-function generateCarouselHTML() {
+function generateIntroCarouselHTML() {
     const carouselIndicators = document.getElementById('carouselIndicators');
     const carouselInner = document.getElementById('carouselInner');
 
@@ -69,4 +69,53 @@ function generateCarouselHTML() {
 }
 
 // Generar el HTML del IntroCarrusel
-generateCarouselHTML();
+generateIntroCarouselHTML();
+
+
+//Arreglo de objetos con la información de las marcas TOP
+const topBrands = [
+    {
+        name: "Ferrari",
+        img: "./resources/img/marcasTop/ferrari-logo2.jpg",
+        url: "#!",
+        backgroundColor:"rgba(57, 192, 237, 0.2)"
+    },
+    {
+        name: "Lamborghini",
+        img: "./resources/img/marcasTop/Lamborghini-logo2.jpg",
+        url: "#!",
+        backgroundColor:"rgba(57, 192, 237, 0.2)"
+    },
+    {
+        name: "Porsche",
+        img: "./resources/img/marcasTop/porsche-logo.jpg",
+        url: "#!",
+        backgroundColor:"rgba(57, 192, 237, 0.2)"
+    }
+]
+
+//Función para generar el HTML de cada marca
+function generarMarcaHTML(brand) {
+    return `
+        <div class="col-md-4">
+            <div class="bg-image hover-overlay ripple border-marcas m-2">
+                <img src="${brand.img}" class="img-fluid" alt="${brand.name}" />
+                <a href="${brand.url}">
+                    <div class="mask" style="background-color: ${brand.backgroundColor} ;"></div>
+                </a>
+            </div>
+        </div>
+    `;
+}
+
+// Obtener el contenedor de marcas
+const marcasContainer = document.getElementById("idMarcasTopContainer");
+
+// Generar y agregar las marcas al contenedor
+topBrands.forEach((brand) => {
+    const marcaHTML = generarMarcaHTML(brand);
+    marcasContainer.innerHTML += marcaHTML;
+});
+
+
+
