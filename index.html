@@ -428,11 +428,93 @@
             <!-- Inner -->
         </div>
         <!-- Carousel wrapper -->
-
-        
-
     </div>
     <!-- End testimonials section -->
+
+    <!--Section: Content-->
+    <section class="mt-5 mb-5" style="background-color: white;">
+        <h4 class="mb-5 mt-5 text-center "><strong>Contáctanos</strong></h4>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <form id="myContactForm" >
+                        <p class="text-center">Los campos marcados con * son obligatorios</p>
+                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" id="name" class="form-control" />
+                                    <label class="form-label" for="name">Nombres *</label>
+                                    <div class="invalid-feedback mb-2">No puede estar vacío, sólo se permiten letras</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" id="lastName" class="form-control" />
+                                    <label class="form-label" for="lastName">Apellidos *</label>
+                                    <div class="invalid-feedback mb-2">No puede estar vacío, sólo se permiten letras</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <!-- Email input -->
+                                <div class="form-outline">
+                                    <input type="email" id="email" class="form-control" />
+                                    <label class="form-label" for="email">Correo electrónico *</label>
+                                    <div class="invalid-feedback">El no puede estar vacío, debe contener un @ y un .com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <!-- teléfono input -->
+                                <div class="form-outline">
+                                    <input type="text" id="cellPhone" class="form-control" maxlength="10"/>
+                                    <label class="form-label" for="cellPhone">Número celular *</label>
+                                    <div class="invalid-feedback mb-2">No puede estar vacío, debe contener mínimo 10 caracteres y sólo se admiten números.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <!-- teléfono input -->
+                                <div class="form-outline">
+                                    <input type="text" id="affair" class="form-control" />
+                                    <label class="form-label" for="affair">Asunto *</label>
+                                    <div class="invalid-feedback">No puede estar vacío</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-outline">
+                                    <textarea class="form-control" id="messaje" rows="4"></textarea>
+                                    <label class="form-label" for="messaje">Mensaje *</label>
+                                    <div class="invalid-feedback">No puede estar vacío</div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked />
+                            <label class="form-check-label" for="form2Example3">
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+        
+                        <!-- Submit button -->
+                        <button type="button" id="enviar" class="btn btn-primary btn-block mb-4">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section: Content-->
 
 
     <footer class="bg-dark text-center text-white">
@@ -530,6 +612,10 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+
+    <!-- SWEET ALERT-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     <!-- INDEX -->
     <script src="./js/index.js"></script>
     <script src="./js/master.js"></script>
