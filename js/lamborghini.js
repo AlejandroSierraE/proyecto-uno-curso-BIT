@@ -3,7 +3,7 @@ const btnRedireccion = document.getElementById("btnDown");
 
 // Escuchar el evento click en el botón y redirigir a la ubicación deseada
 btnRedireccion.addEventListener("click", function() {
-    const destino = document.getElementById("containerFBread");
+    const destino = document.getElementById("containerLBread");
 
     // Scroll suave hacia la ubicación del destino
     destino.scrollIntoView({ behavior: "smooth" });
